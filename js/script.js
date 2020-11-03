@@ -62,3 +62,47 @@ let incr = 10,
 //Если хотябы один true то в итоге будет true
 
 // ! оператор отрицания != не равно
+
+// if (4 === 4) {
+//     console.log('Ok');
+// } else{
+//     console.log('Error');
+// }
+let num = 50;
+// (num === 50) ? console.log('Ok') : console.log('Error');
+
+
+// switch (num) {
+//    case 49:
+//        console.log('False');
+//        break;
+//    case 100:
+//        console.log('False');
+//        break;
+//    case 50:
+//        console.log('True');
+//        break;
+//    default:
+//        console.log('Нет верного значения');
+//        break;
+// }
+
+// while (num <= 55) {
+//     console.log(num);
+//     num++;
+// }
+
+// do {
+//     console.log(num);
+//     num++;
+// }
+// while (num <55);
+
+for (let i = 1; i < 8; i++){
+    if (i === 6) {
+        // break;
+        continue;
+    }
+    console.log(i);
+
+}
