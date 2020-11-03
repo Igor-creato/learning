@@ -1,8 +1,8 @@
 " use strict ";
 let number = 4.5;
 
-console.log(number);
-console.log('string' * 9);
+// console.log(number);
+// console.log('string' * 9);
 
 const persone = 'Igor';
 const bool = true;
@@ -15,12 +15,12 @@ const obj = {
     isMarrid: false
 };
 
-console.log(obj.name); // Выводит знчение положенное в name (John)
+// console.log(obj.name); // Выводит знчение положенное в name (John)
 //console.log(obj ['name']); // тоже самое, но лучше через точку
 
 let arr = ['img.png', 'img2.png', 8, 'apple.jpg', {}, []];
 
-console.log(arr[1]);
+// console.log(arr[1]);
 
 // const result = confirm('Are you here?'); 
 // console.log(result); //Есло ок то возвращает true иначе false
