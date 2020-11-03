@@ -20,4 +20,26 @@ privat: false
      personalMovieDB.movies[a] = b;
      personalMovieDB.movies[c] = d;
 
- console.table(personalMovieDB);
+ if (4 === 4) {
+     console.log('Ok');
+ } else{
+     console.log('Error');
+ }
+const num = 50;
+// (num === 50) ? console.log('Ok') : console.log('Error');
+
+
+switch (num) {
+    case 49:
+        console.log('False');
+        break;
+    case 100:
+        console.log('False');
+        break;
+    case 50:
+        console.log('True');
+        break;
+    default:
+        console.log('Нет верного значения');
+        break;
+}
