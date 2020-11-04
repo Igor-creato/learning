@@ -173,3 +173,26 @@ const arr = [1,2,3,4,5,6,7];
 
 // const test = '12.2px';
 // console.log(parseInt(test));
+
+function first() {
+    setTimeout(function () {
+        console.log(1);
+    }, 500);
+}
+
+function second() {
+    console.log(2);
+}
+first();
+second();
+
+function learnJS(lang, callback) {
+    console.log(`Я учу ${lang}`);
+    callback();
+}
+
+function done() {
+        console.log('Я прошол это урок');
+}
+
+learnJS('JavaScript', done);

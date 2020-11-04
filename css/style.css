@@ -1,0 +1,11 @@
+.my-button{
+    background: rgb(64, 21, 253);
+    border: 1px solid rgb(64, 21, 253);
+    border-radius: 3px;
+    color: aliceblue;
+    font-weight: bold;
+    font-size: 20px;
+    padding: 10px 15px;
+    cursor: pointer;
+    outline: none;
+}
