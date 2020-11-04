@@ -1,14 +1,14 @@
-" use strict ";
+// " use strict ";
 
-const numberOfFilms = +prompt('Сколько фильмов вы уже посмотрели?', '');
+// const numberOfFilms = +prompt('Сколько фильмов вы уже посмотрели?', '');
 
-let personalMovieDB = {
-count: numberOfFilms,
-movies: {},
-actors: {},
-genres: [],
-privat: false
-};
+// let personalMovieDB = {
+// count: numberOfFilms,
+// movies: {},
+// actors: {},
+// genres: [],
+// privat: false
+// };
 
 
 
@@ -34,7 +34,7 @@ privat: false
 //     }
 // }
 
-let i=0;
+// let i=0;
 // while(i<2){
 //         let a = prompt('Один из просмотренных фильмов', ''),
 //             b = prompt('На сколько оцените его', '');
@@ -48,27 +48,28 @@ let i=0;
 //     }
 // }
 
-do{
-        let a = prompt('Один из просмотренных фильмов', ''),
-            b = prompt('На сколько оцените его', '');
+// do{
+//         let a = prompt('Один из просмотренных фильмов', ''),
+//             b = prompt('На сколько оцените его', '');
 
-        if (a != null && b != null && a != '' && b != '' && a.length < 50){
-            personalMovieDB.movies[a] = b;
-            i++;
-    } else {
+//         if (a != null && b != null && a != '' && b != '' && a.length < 50){
+//             personalMovieDB.movies[a] = b;
+//             i++;
+//     } else {
 
-        i--;
-    }
-}
-while(i<2);
+//         i--;
+//     }
+// }
+// while(i<2);
 
-if (personalMovieDB.count < 10){
-    console.log('Просмотренно мало фильмов');
-}else if (personalMovieDB.count >= 10 && personalMovieDB.count <= 30){
-    console.log('Классический зритель');
-}else if(personalMovieDB.count > 30){
-    console.log('Киноман');
-}else {
-    console.log('Error');
-}
-console.log(personalMovieDB);
+// if (personalMovieDB.count < 10){
+//     console.log('Просмотренно мало фильмов');
+// }else if (personalMovieDB.count >= 10 && personalMovieDB.count <= 30){
+//     console.log('Классический зритель');
+// }else if(personalMovieDB.count > 30){
+//     console.log('Киноман');
+// }else {
+//     console.log('Error');
+// }
+// console.log(personalMovieDB);
+
