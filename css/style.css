@@ -99,7 +99,7 @@ body{
     /* margin-top: -650px;
     transition: all .3s ease-in-out; */
 }
-.close{
+.close-btn{
     position: absolute;
     top: 5px;
     right: 5px;

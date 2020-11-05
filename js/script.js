@@ -148,8 +148,8 @@
 //     return a + b;
 //  };
 
-const str = 'teSt';
-const arr = [1,2,3,4,5,6,7];
+// const str = 'teSt';
+// const arr = [1,2,3,4,5,6,7];
 
 // console.log(str[2]);
 // console.log(str.toUpperCase());
@@ -176,12 +176,12 @@ const arr = [1,2,3,4,5,6,7];
 
 function first() {
     setTimeout(function () {
-        console.log(1);
+
     }, 500);
 }
 
 function second() {
-    console.log(2);
+
 }
 first();
 second();
@@ -195,4 +195,5 @@ function done() {
         console.log('Я прошол это урок');
 }
 
-learnJS('JavaScript', done);
+// learnJS('JavaScript', done);
+
