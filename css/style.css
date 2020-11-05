@@ -1,4 +1,7 @@
-.my-button{
+body{
+    font-family: sans-serif;
+}
+.my-button, .my-popup-button{
     background: rgb(64, 21, 253);
     border: 1px solid rgb(64, 21, 253);
     border-radius: 3px;
@@ -8,4 +11,162 @@
     padding: 10px 15px;
     cursor: pointer;
     outline: none;
+}
+.menu{
+    background: rgb(64, 21, 253);
+    height: 70px;
+    width: 100%;
+    border-bottom: 1px solid rgb(36, 11, 146);
+
+}
+.navigation{
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+}
+.navigation-item-link{
+    position: relative;
+    /* display: inline-block; */
+    text-decoration: none;
+    color: aliceblue;
+    font-weight: bold;
+    font-size: 20px;
+
+}
+.navigation-item-link:before{
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background-color: aliceblue;
+    /* color: aliceblue; */
+    bottom: -3px;
+    left: 50%;
+    transition: width 0.5s ease-in-out;
+    transform: translateX(-50%);
+}
+.navigation-item-link:hover:before{
+    width: 100%;
+}
+.active:before{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: aliceblue;
+    /* color: aliceblue; */
+    bottom: -3px;
+    left: 50%;
+}
+.navigation-item:not(:last-child){
+
+    margin-right: 15px;
+}
+.my-popup{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	opacity: 0; 
+    z-index: 9999;	
+    overflow: auto;
+    position: fixed;
+    width: 100%;
+    /* height: 100%; */
+    visibility: hidden;
+	background: rgba(0,0,0,.8);
+	margin-top: -650px;
+	transition: all .3s ease-in-out;
+}
+.my-popup-style{
+    width: 350px;
+    min-width: 300px;
+    /* background: rgb(64, 21, 253); */
+    background-image: linear-gradient(to top, #c4c5c7 0%, #dcdddf 52%, #ebebeb 100%);
+    /* background: #C9CCD3;
+    background-image: linear-gradient(-180deg, rgba(255,255,255,0.50) 0%, rgba(0,0,0,0.50) 100%);
+    background-blend-mode: lighten; */
+    /* background-image: linear-gradient(to top, #e6e9f0 0%, #eef1f5 100%); */
+    position: relative;
+    border-radius: 3px;
+    box-shadow: 0 0 6px rgba(0, 0, 0, 0.2);
+    padding: 10px;
+    /* margin-top: -650px;
+    transition: all .3s ease-in-out; */
+}
+.close{
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    font-size: 18px;
+    color: rgb(160, 159, 159);
+}
+.my-popup-header{
+    margin: 20px 0 20px 0;
+}
+.wrapper-form{
+    display: flex;
+    flex-direction: column;
+}
+.input-label{
+    margin: 2px 0 0 0;
+    font-weight: bold;
+    font-size: 16px;
+
+}
+.input-popup{
+    margin: 2px 0 10px 0;
+    padding: 10px 0;
+    font-size: 15px;
+    border: 2px solid rgb(160, 159, 159) ;
+    border-radius: 3px;
+    padding-left: 10px;
+    outline: none;
+}
+.input-popup::-webkit-input-placeholder{
+    color: rgb(160, 159, 159);
+    font-size: 15px;
+    
+}
+.input-popup::-moz-placeholder{
+    font-size: 20px;
+}
+.input-popup:-ms-input-placeholder{
+    font-size: 20px;
+}
+.input-popup::-ms-input-placeholder{
+    font-size: 20px;
+
+}
+.input-popup::placeholder{
+    font-size: 20px;
+}
+.input-popup:focus::-webkit-input-placeholder{
+    color: transparent;
+}
+.input-popup:focus::-moz-placeholder{
+    color: transparent;
+}
+.input-popup:focus:-ms-input-placeholder{
+    color: transparent;
+}
+.input-popup:focus::-ms-input-placeholder{
+    color: transparent;
+}
+.input-popup:focus::placeholder{
+    color: transparent;
+}
+.my-popup-button{
+    align-self: flex-start;
+    width: 40%;
+    margin-top: 2px;
 }

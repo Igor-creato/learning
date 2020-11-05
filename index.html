@@ -9,10 +9,34 @@
     <title>Document</title>
 </head>
 <body>
+    <nav class="menu">
+        <ul class="navigation">
+            <li class="navigation-item"><a href="#" class="navigation-item-link active">Главная</a></li>
+            <li class="navigation-item"><a href="#" class="navigation-item-link">Онас</a></li>
+            <li class="navigation-item"><a href="#" class="navigation-item-link">Преимущества</a></li>
+            <li class="navigation-item"><a href="#" class="navigation-item-link">Контакты</a></li>
+            <li class="navigation-item"><a href="#" class="navigation-item-link">Портфолио</a></li>
+        </ul>
+    </nav>
     <h1>My project</h1>
     
     <p>Hello world!</p>
-    <button class="my-button animate__animated animate__fast">Заказать</button>
+    <button class="my-button animate__animated animate__fast animate__rubberBand">Заказать</button>
+    <div class="my-popup">
+            <div class="my-popup-style">
+                <button class="close">&#10006;</button>
+                <form action="" class="my-popup-form">
+                   <div class="wrapper-form">
+                        <h3 class="my-popup-header">Введите Ваши данные:</h3>
+                        <label for="name" class="input-label">Имя:</label>
+                        <input type="text" name="name" id="name" class="input-popup" placeholder="Введите имя">
+                        <label for="phone" class="input-label">Телефон:</label>
+                        <input type="text" name="name" id="phone" class="input-popup" placeholder="Введите номер телефона">
+                        <button class="my-popup-button">Отправить</button>
+                   </div>
+                </form>
+            </div>
+    </div>
     <script src="js/script.js"></script>
     <script src="js/script-2.js"></script>
     <script src="js/script-3.js"></script>
