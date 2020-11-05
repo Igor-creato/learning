@@ -7,50 +7,15 @@ setInterval(function start() {
     btnRubberBand.classList.toggle("animate__rubberBand");
  
     
-},2000);
-
-// window.onload = function () {
-//     let popUp,
-//         slise,
-//         close;
-//     document.querySelector('.my-button').onclick = function popUpWindow() {
-//         popUp = document.querySelector('.my-popup');
-//         slise = document.querySelector('.my-popup-style');
-//         // slise.style.cssText = `
-//         // margin: 0;
-//         // `
-//         popUp.style.cssText =`
-//         visibility: visible;
-//         opacity: 1;
-//         margin-top: 0;
-//         `;
-//     };
-//     document.querySelector('.close').onclick = function popUpClose() {
-//         close = document.querySelector('.my-popup');
-//         // slise.style.cssText = `
-//         // margin: -650px;
-//         // `
-//         close.style.cssText =`
-//         visibility: hidden;
-//         opacity: 0;
-//         margin-top: -650px;
-//         `;
-//     };
-
-// };
-
+},3000);
 
 
 window.onload = function () {
-    let popUp,
-        slise;
+    let popUp = document.querySelector('.my-popup'),
+        outPopUp = document.querySelector('.my-popup-style'),
+        slise = document.querySelector('.my-popup');
         
     document.querySelector('.my-button').onclick = function popUpWindow() {
-        popUp = document.querySelector('.my-popup');
-        slise = document.querySelector('.my-popup-style');
-        // slise.style.cssText = `
-        // margin: 0;
-        // `
         popUp.style.cssText =`
         visibility: visible;
         opacity: 1;
@@ -58,33 +23,28 @@ window.onload = function () {
         `;
     };
 
-    function popUpClose() {
-        let close = document.querySelector('.my-popup');
-        // slise.style.cssText = `
-        // margin: -650px;
-        // `
-        close.style.cssText =`
-        visibility: hidden;
-        opacity: 0;
-        margin-top: -650px;
-        `;
-    }
-    closed.onclick = () => closed.addEventListener("click", popUpClose);
+    const   closest = document.querySelectorAll(".closed");
+
+    closest.forEach(function(elem) { // проходим все элементы коллекции
+        elem.addEventListener("click", function(){ 
+            
+            slise.style.cssText =`
+            visibility: hidden;
+            opacity: 0;
+            margin-top: -650px;
+            `;  
+        });
+      });
 
 
-    // document.querySelector('.close').onclick = function popUpClose() {
-    //     close = document.querySelector('.my-popup');
-    //     // slise.style.cssText = `
-    //     // margin: -650px;
-    //     // `
-    //     close.style.cssText =`
-    //     visibility: hidden;
-    //     opacity: 0;
-    //     margin-top: -650px;
-    //     `;
-    // };
 
 };
+
+
+
+
+
+
 
 
 
