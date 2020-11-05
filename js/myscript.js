@@ -6,28 +6,29 @@ setInterval(function start() {
     
     btnRubberBand.classList.toggle("animate__rubberBand");
  
-    
 },3000);
 
 
 window.onload = function () {
-    let popUp = document.querySelector('.my-popup'),
+    let popUpBtn = document.querySelector('.my-button'),
         outPopUp = document.querySelector('.my-popup-style'),
-        slise = document.querySelector('.my-popup');
+        slise = document.querySelector('.my-popup'),
+        closest = document.querySelectorAll(".closed");    
         
-    document.querySelector('.my-button').onclick = function popUpWindow() {
-        popUp.style.cssText =`
-        visibility: visible;
-        opacity: 1;
-        margin-top: 0;
-        `;
-    };
-
-    const   closest = document.querySelectorAll(".closed");
-
-    closest.forEach(function(elem) { // проходим все элементы коллекции
+        const myPopUp = function(event) {
+            if(event.target.classList.contains("my-button")) { 
+             slise.style.cssText =`
+             visibility: visible;
+             opacity: 1;
+             margin-top: 0;
+            `;
+            }
+          };
+        
+        popUpBtn.addEventListener("click", myPopUp);
+        
+        closest.forEach(function(elem) { // проходим все элементы коллекции
         elem.addEventListener("click", function(){ 
-            
             slise.style.cssText =`
             visibility: hidden;
             opacity: 0;
@@ -41,6 +42,15 @@ window.onload = function () {
 };
 
 
+
+
+  // document.querySelector('.my-button').onclick = function popUpWindow() {
+    //     popUp.style.cssText =`
+    //     visibility: visible;
+    //     opacity: 1;
+    //     margin-top: 0;
+    //     `;
+    // };
 
 
 
