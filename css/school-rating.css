@@ -1,0 +1,11 @@
+.school-rating{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.card{
+    border: 2px solid #cccccc;
+    border-radius: 4px;
+    padding: 10px;
+    margin: 10px 0;
+}

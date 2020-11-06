@@ -1,44 +1,52 @@
-let btnRubberBand;
-btnRubberBand = document.querySelector('.my-button');
+const btnRubberBand = document.querySelector('.my-button');
+const animista = document.querySelector('.puff');
 
 
 setInterval(function start() {
     
-    btnRubberBand.classList.toggle("animate__rubberBand");
+    btnRubberBand.classList.toggle('animate__rubberBand');
  
-},3000);
+},2500);
+
+setInterval(function puffOut() {
+
+  animista.classList.add('puffOut');
+setTimeout(function puffOutRemove() {
+  animista.classList.remove('puffOut');
+},1000);
+  
+},5000);
 
 
 window.onload = function () {
-    let popUpBtn = document.querySelector('.my-button'),
-        outPopUp = document.querySelector('.my-popup-style'),
+
+        
+
+          ///////////////////////////////////////////////////////////////////////////////////
+          
+          
+         
+          ///////////////////////////////////////////////////////////////////////////////////////
+    let outPopUp = document.querySelector('.my-popup-style'),
         slise = document.querySelector('.my-popup'),
-        closest = document.querySelectorAll(".closed");    
+        closest = document.querySelectorAll(".closed"),
+        openPopUp = document.querySelectorAll('.open-popup');          
+
+      openPopUp.forEach(function (elem) {
+        elem.addEventListener('click', function () {
+            // slise.classList.add('my-popup-visible', outPopUp.classList.add('my-popup-style-visible'));
+            slise.classList.add('my-popup-visible'); 
+            outPopUp.classList.add('my-popup-style-visible');
+          });
+      });  
+
         
-        const myPopUp = function(event) {
-            if(event.target.classList.contains("my-button")) { 
-             slise.style.cssText =`
-             visibility: visible;
-             opacity: 1;
-             margin-top: 0;
-            `;
-            }
-          };
-        
-        popUpBtn.addEventListener("click", myPopUp);
-        
-        closest.forEach(function(elem) { // проходим все элементы коллекции
+      closest.forEach(function(elem) { // проходим все элементы коллекции
         elem.addEventListener("click", function(){ 
-            slise.style.cssText =`
-            visibility: hidden;
-            opacity: 0;
-            margin-top: -650px;
-            `;  
+          slise.classList.remove('my-popup-visible'); 
+          outPopUp.classList.remove('my-popup-style-visible');
         });
       });
-
-
-
 };
 
 

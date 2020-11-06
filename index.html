@@ -1,11 +1,13 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="img/coin.png" type="png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/animation.css">
+    <link rel="stylesheet" href="css/school-rating.css">
     <title>Document</title>
 </head>
 <body>
@@ -21,25 +23,73 @@
     <h1>My project</h1>
     
     <p>Hello world!</p>
-    <button class="my-button animate__animated animate__fast animate__rubberBand">Заказать</button>
+    <button class="my-button animate__animated animate__fast open-popup">Заказать</button>
+    <button class="my-button puff puffOut open-popup">Заказать</button>
+
+<div class="school-rating">
+        <div class="card">
+            <div class="card-body">
+                <div class="card-item">
+                    <h3 class="card-title">Scill Box</h3>
+                    <p class="card-text">Программирование</p>
+                    <div class="card-rating">4.5</div>
+                </div>
+    
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-body">
+                <div class="card-item">
+                    <h3 class="card-title">Udemi</h3>
+                    <p class="card-text">Безопастность</p>
+                    <div class="card-rating">3.5</div>
+                </div>
+    
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-body">
+                <div class="card-item">
+                    <h3 class="card-title">Geec Brains</h3>
+                    <p class="card-text">Веб дизайн</p>
+                    <div class="card-rating">4.9</div>
+                </div>
+    
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-body">
+                <div class="card-item">
+                    <h3 class="card-title">Scill Box</h3>
+                    <p class="card-text">Программирование</p>
+                    <div class="card-rating">4.5</div>
+                </div>
+    
+            </div>
+        </div>
+</div>
+
     <div class="my-popup">
-            <div class="my-popup-style">
-                <button class="close-btn closed" id="closed">&#10006;</button>
-                <form action="" class="my-popup-form">
-                   <div class="wrapper-form">
-                        <h3 class="my-popup-header">Введите Ваши данные:</h3>
-                        <label for="name" class="input-label">Имя:</label>
-                        <input type="text" name="name" id="name" class="input-popup" placeholder="Введите имя">
-                        <label for="phone" class="input-label">Телефон:</label>
-                        <input type="text" name="name" id="phone" class="input-popup" placeholder="Введите номер телефона">
-                        <button class="my-popup-button closed" id="closed">Отправить</button>
-                   </div>
-                </form>
+            <div class="my-popup-wrapper">
+                <div class="my-popup-style" id="my-popup-style">
+                    <button class="close-btn closed">&#10006;</button>
+                    <form action="" class="my-popup-form">
+                       <div class="wrapper-form">
+                            <h3 class="my-popup-header">Введите Ваши данные:</h3>
+                            <label for="name" class="input-label">Имя:</label>
+                            <input type="text" name="name" id="name" class="input-popup" placeholder="Введите имя">
+                            <label for="phone" class="input-label">Телефон:</label>
+                            <input type="text" name="name" id="phone" class="input-popup" placeholder="Введите номер телефона">
+                            <button class="my-popup-button closed">Отправить</button>
+                       </div>
+                    </form>
+                </div>
             </div>
     </div>
-    <script src="js/script.js"></script>
-    <script src="js/script-2.js"></script>
-    <script src="js/script-3.js"></script>
+    <!-- <script src="js/script.js"></script> -->
+    <!-- <script src="js/script-2.js"></script> -->
+    <!-- <script src="js/script-3.js"></script> -->
+    <script src="js/app.js"></script>
     <script src="js/myscript.js"></script>
 </body>
 </html>

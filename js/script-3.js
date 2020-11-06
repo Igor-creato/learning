@@ -105,13 +105,13 @@
 // const {border, bg} = options.colors;
 // console.log(border);
 
- const arr = [2, 13, 26, 8, 10];
- arr.sort(compareNum);
- console.log(arr);
+//  const arr = [2, 13, 26, 8, 10];
+//  arr.sort(compareNum);
+//  console.log(arr);
 
- function compareNum(a, b) {
-     return a - b;
- }
+//  function compareNum(a, b) {
+//      return a - b;
+//  }
 // arr[99] = 0;
 // console.log(arr.length);
 // console.log(arr);

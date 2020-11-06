@@ -174,26 +174,26 @@
 // const test = '12.2px';
 // console.log(parseInt(test));
 
-function first() {
-    setTimeout(function () {
+// function first() {
+//     setTimeout(function () {
 
-    }, 500);
-}
+//     }, 500);
+// }
 
-function second() {
+// function second() {
 
-}
-first();
-second();
+// }
+// first();
+// second();
 
-function learnJS(lang, callback) {
-    console.log(`Я учу ${lang}`);
-    callback();
-}
+// function learnJS(lang, callback) {
+//     console.log(`Я учу ${lang}`);
+//     callback();
+// }
 
-function done() {
-        console.log('Я прошол это урок');
-}
+// function done() {
+//         console.log('Я прошол это урок');
+// }
 
 // learnJS('JavaScript', done);
 
