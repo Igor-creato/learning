@@ -1,6 +1,9 @@
 body{
     font-family: sans-serif;
 }
+/* .lock-body{
+    overflow-y: hidden; 
+} */
 .my-button, .my-popup-button{
     background: rgb(64, 21, 253);
     border: 1px solid rgb(64, 21, 253);
