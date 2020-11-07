@@ -31,13 +31,12 @@ window.onload = function () {
         elem.addEventListener('click', function () {
             slise.classList.add('my-popup-visible'); 
             outPopUp.classList.add('my-popup-style-visible');
-
-            
             scrollHidden.style.cssText = `
             overflow-y: hidden;
             padding-right: ${lockPaddingValue};
             `;
             closeOut();
+            escClose();
           });
       });  
  
@@ -58,6 +57,24 @@ window.onload = function () {
           });
         }
       }
+
+      function escClose() {
+        if (slise.classList.contains('my-popup-visible')){
+          document.addEventListener('keydown', function (event) {
+            if (event.code === 'Escape'){
+              slise.classList.remove('my-popup-visible'); 
+              outPopUp.classList.remove('my-popup-style-visible');
+              setTimeout(function () {
+                scrollHidden.style.cssText = `
+                overflow-y: '';
+                padding-right: '';
+                `;
+              }, timeout);
+            }
+          });
+    
+        }
+      }
 ////////////////////////////////////////////////////////////
 
 
@@ -76,6 +93,7 @@ window.onload = function () {
           e.preventDefault();
         });
       });
+
 
 };
 
