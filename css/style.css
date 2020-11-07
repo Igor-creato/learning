@@ -1,19 +1,18 @@
 body{
     font-family: sans-serif;
 }
-/* .lock-body{
-    overflow-y: hidden; 
-} */
+
 .my-button, .my-popup-button{
     background: rgb(64, 21, 253);
     border: 1px solid rgb(64, 21, 253);
     border-radius: 3px;
     color: aliceblue;
     font-weight: bold;
-    font-size: 20px;
+    font-size: 15px;
     padding: 10px 15px;
     cursor: pointer;
     outline: none;
+    text-transform: uppercase;
 }
 .menu{
     background: rgb(64, 21, 253);
