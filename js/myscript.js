@@ -25,7 +25,7 @@ window.onload = function () {
         popUpWrapper = document.querySelector('.my-popup-wrapper'),
         scrollHidden = document.querySelector('body'),
         timeout = 500;
-const lockPaddingValue = window.innerWidth - popUpWrapper.offsetWidth + 'px';
+    const lockPaddingValue = window.innerWidth - popUpWrapper.offsetWidth + 'px';
 
       openPopUp.forEach(function (elem) {
         elem.addEventListener('click', function () {
@@ -48,8 +48,10 @@ const lockPaddingValue = window.innerWidth - popUpWrapper.offsetWidth + 'px';
                       slise.classList.remove('my-popup-visible'); 
                       outPopUp.classList.remove('my-popup-style-visible');
                       setTimeout(function () {
-                        scrollHidden.classList.remove('lock-body');
-                        scrollHidden.style.paddingRight = '';
+                        scrollHidden.style.cssText = `
+                        overflow-y: '';
+                        padding-right: '';
+                        `;
                       }, timeout);
 
                     }
@@ -65,16 +67,12 @@ const lockPaddingValue = window.innerWidth - popUpWrapper.offsetWidth + 'px';
         elem.addEventListener("click", function(e){ 
           slise.classList.remove('my-popup-visible'); 
           outPopUp.classList.remove('my-popup-style-visible');
-          // scrollHidden.classList.remove('lock-body');
-          // scrollHidden.style.paddingRight = '';
-
           setTimeout(function () {
             scrollHidden.style.cssText = `
             overflow-y: '';
             padding-right: '';
             `;
           }, timeout);
-
           e.preventDefault();
         });
       });
@@ -84,13 +82,6 @@ const lockPaddingValue = window.innerWidth - popUpWrapper.offsetWidth + 'px';
 
 
 
-  // document.querySelector('.my-button').onclick = function popUpWindow() {
-    //     popUp.style.cssText =`
-    //     visibility: visible;
-    //     opacity: 1;
-    //     margin-top: 0;
-    //     `;
-    // };
 
 
 
