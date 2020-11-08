@@ -44,14 +44,7 @@ window.onload = function () {
         if (slise.classList.contains('my-popup-visible')){
           popUpWrapper.addEventListener('click', function (event) {
             if(event.target === popUpWrapper){
-                      slise.classList.remove('my-popup-visible'); 
-                      outPopUp.classList.remove('my-popup-style-visible');
-                      setTimeout(function () {
-                        scrollHidden.style.cssText = `
-                        overflow-y: '';
-                        padding-right: '';
-                        `;
-                      }, timeout);
+              remove();
 
                     }
           });
@@ -62,6 +55,14 @@ window.onload = function () {
         if (slise.classList.contains('my-popup-visible')){
           document.addEventListener('keydown', function (event) {
             if (event.code === 'Escape'){
+              remove();
+            }
+          });
+        }
+      }
+
+
+      function remove() {
               slise.classList.remove('my-popup-visible'); 
               outPopUp.classList.remove('my-popup-style-visible');
               setTimeout(function () {
@@ -70,10 +71,6 @@ window.onload = function () {
                 padding-right: '';
                 `;
               }, timeout);
-            }
-          });
-    
-        }
       }
 ////////////////////////////////////////////////////////////
 
@@ -82,14 +79,7 @@ window.onload = function () {
 //////////////////////////////////////////////////////////////////////
       closest.forEach(function(elem) { 
         elem.addEventListener("click", function(e){ 
-          slise.classList.remove('my-popup-visible'); 
-          outPopUp.classList.remove('my-popup-style-visible');
-          setTimeout(function () {
-            scrollHidden.style.cssText = `
-            overflow-y: '';
-            padding-right: '';
-            `;
-          }, timeout);
+          remove();
           e.preventDefault();
         });
       });

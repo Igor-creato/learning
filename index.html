@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/animation.css">
     <link rel="stylesheet" href="css/school-rating.css">
+    <link rel="stylesheet" href="css/check-box.css">
     <title>Document</title>
 </head>
 <body>
@@ -26,47 +27,66 @@
     <button class="my-button animate__animated animate__fast open-popup">Заказать</button>
     <button class="my-button puff puffOut open-popup">Заказать</button>
 
-<div class="school-rating">
-        <div class="card">
-            <div class="card-body">
-                <div class="card-item">
-                    <h3 class="card-title">Scill Box</h3>
-                    <p class="card-text">Программирование</p>
-                    <div class="card-rating">4.5</div>
-                </div>
+<div class="content">
+
+    <div class="sidebar">
+        <diw class="check-boxes">
+            <div data-course='udemi'><input type="checkbox" id="udemi" class="check-box"><label for="udemi" class="label-check">Udemi</label></div>
+            <div data-course='gic-brains'><input type="checkbox" id="gic-brains" class="check-box"><label for="gic-brains" class="label-check"><span style="color: red;">Gic Brains</span></label></div>
+            <div data-course='scill-box'><input type="checkbox" id="scill-box" class="check-box"><label for="scill-box" class="label-check">Scill box</label></div>
+            <div data-course='netology'><input type="checkbox" id="netology" class="check-box"><label for="netology" class="label-check">Нетология</label></div>
+        </diw>
+        <!-- <div class="content"></div> -->
+
     
-            </div>
-        </div>
-        <div class="card">
-            <div class="card-body">
-                <div class="card-item">
-                    <h3 class="card-title">Udemi</h3>
-                    <p class="card-text">Безопастность</p>
-                    <div class="card-rating">3.5</div>
+        <div><input type="radio" name="rb" id="rb1" class="check-radio"> <label for="rb1" class="label-check">Переключатель 2</label></div>
+        <div><input type="radio" name="rb" id="rb2" class="check-radio"> <label for="rb2" class="label-check">Переключатель 2</label></div>
+        <div><input type="radio" name="rb" id="rb3" class="check-radio"> <label for="rb3" class="label-check">Флажок 3 очень длинное название <br>флажка проверка на <br>работоспособность</label></div>
+    </div>
+
+    <div class="school-rating">
+            <div class="card">
+                <div class="card-body">
+                    <div class="card-item">
+                        <h3 class="card-title">Scill Box</h3>
+                        <p class="card-text">Программирование</p>
+                        <div class="card-rating">4.5</div>
+                    </div>
+        
                 </div>
-    
             </div>
-        </div>
-        <div class="card">
-            <div class="card-body">
-                <div class="card-item">
-                    <h3 class="card-title">Geec Brains</h3>
-                    <p class="card-text">Веб дизайн</p>
-                    <div class="card-rating">4.9</div>
+            <div class="card">
+                <div class="card-body">
+                    <div class="card-item">
+                        <h3 class="card-title">Udemi</h3>
+                        <p class="card-text">Безопастность</p>
+                        <div class="card-rating">3.5</div>
+                    </div>
+        
                 </div>
-    
             </div>
-        </div>
-        <div class="card">
-            <div class="card-body">
-                <div class="card-item">
-                    <h3 class="card-title">Scill Box</h3>
-                    <p class="card-text">Программирование</p>
-                    <div class="card-rating">4.5</div>
+            <div class="card">
+                <div class="card-body">
+                    <div class="card-item">
+                        <h3 class="card-title">Geec Brains</h3>
+                        <p class="card-text">Веб дизайн</p>
+                        <div class="card-rating">4.9</div>
+                    </div>
+        
                 </div>
-    
             </div>
-        </div>
+            <div class="card">
+                <div class="card-body">
+                    <div class="card-item">
+                        <h3 class="card-title">Нетология</h3>
+                        <p class="card-text">Программирование</p>
+                        <div class="card-rating">4.5</div>
+                    </div>
+        
+                </div>
+            </div>
+    </div>
+    
 </div>
 
     <div class="my-popup">
@@ -91,5 +111,6 @@
     <!-- <script src="js/script-3.js"></script> -->
     <script src="js/app.js"></script>
     <script src="js/myscript.js"></script>
+    <script src="js/check-box.js"></script>
 </body>
 </html>

@@ -9,3 +9,85 @@
     padding: 10px;
     margin: 10px 0;
 }
+.card-open{
+  -webkit-animation-name: open;
+          animation-name: open;
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+  -webkit-animation-direction: normal;
+          animation-direction: normal;
+  -webkit-animation-timing-function: ease-out;
+          animation-timing-function: ease-out;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  -webkit-animation-delay: 0s;
+          animation-delay: 0s;
+}
+.card-close{
+  -webkit-animation-name: close;
+          animation-name: close;
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+  -webkit-animation-direction: normal;
+          animation-direction: normal;
+  -webkit-animation-timing-function: ease-out;
+          animation-timing-function: ease-out;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  -webkit-animation-delay: 0s;
+          animation-delay: 0s;
+}
+
+@-webkit-keyframes open {
+    0% {
+      display: block;
+      opacity: 0;
+      visibility: hidden;
+    }
+    100% {
+      display: block;
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+
+@keyframes open {
+    0% {
+      display: block;
+      opacity: 0;
+      visibility: hidden;
+    }
+    100% {
+      display: block;
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+@-webkit-keyframes close {
+    0% {
+
+      opacity: 1;
+      visibility: visible;
+    }
+    100% {
+
+      opacity: 0;
+      visibility: hidden;
+    }
+  }
+@keyframes close {
+    0% {
+
+      opacity: 1;
+      visibility: visible;
+    }
+    100% {
+
+      opacity: 0;
+      visibility: hidden;
+    }
+  }
