@@ -1,10 +1,10 @@
 " use strict ";
 
-const filterBox = document.querySelectorAll('.card'),
-      courses = document.querySelector('.check-boxes'),
-      courseOne = document.querySelectorAll('.check-box'),
-      idSet = [],
-      dataAtribute =[];
+// const filterBox = document.querySelectorAll('.card'),
+//       courses = document.querySelector('.check-boxes'),
+//       courseOne = document.querySelectorAll('.check-box'),
+//       idSet = [],
+//       dataAtribute =[];
 //////////////////////////////////////////////////////////////////////////////////////////
 // courseOne.forEach(function (elem) {
 //     elem.addEventListener('click', function (event) {
@@ -26,33 +26,44 @@ const filterBox = document.querySelectorAll('.card'),
 
 //////////////////////////////////////////////////////////////////////
 
-function arrayAdd() {
-    courseOne.forEach(function (elem) {
-        elem.addEventListener('click', function (event) {
-            let ch = event.target;
-            if (ch.tagName === 'INPUT' && ch.type === 'checkbox' /*&& ch.checked*/){
-                // console.log(ch.id, ch.checked);
-                let b = ch.parentNode.dataset.course;
-                    // dataAtribute.push(b);
-                if (idSet.indexOf(b) == -1){
-                    idSet.push(b); 
-                     console.log(idSet);
-                } else if (idSet.indexOf(b) != -1){
-                    let index = idSet.indexOf(b);
-                    idSet.splice(index, 1);
-                     console.log(idSet);
-                }
-            }
-        });
-    });
-}
+// function arrayAdd() {
+//     courseOne.forEach(function (elem) {
+//         elem.addEventListener('click', function (event) {
+//             let ch = event.target;
+//             if (ch.tagName === 'INPUT' && ch.type === 'checkbox' /*&& ch.checked*/){
+//                 // console.log(ch.id, ch.checked);
+//                 let b = ch.parentNode.dataset.course;
+//                     // dataAtribute.push(b);
+//                 if (idSet.indexOf(b) == -1){
+//                     idSet.push(b); 
+//                      console.log(idSet);
+//                 } else if (idSet.indexOf(b) != -1){
+//                     let index = idSet.indexOf(b);
+//                     idSet.splice(index, 1);
+//                      console.log(idSet);
+//                 }
+//             }
+            
+//         });
+//     });
+// }
 
-arrayAdd();
+// document.addEventListener("DOMContentLoaded", () => {
+//     courseOne.forEach(function () {
+//         if (courseOne.checked){
+//            idSet.push(courseOne.parentNode.dataset.course);
+//         }
+//     });
+//     console.log(idSet);
+//   });
+
+
+// arrayAdd();
 
 ////////////////////////////////////////////////////////////////////
-function filterElem() {
+// function filterElem() {
 
-}
+// }
 
 
 // const filterBox = document.querySelectorAll('.box');

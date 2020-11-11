@@ -1,5 +1,10 @@
 const btnRubberBand = document.querySelector('.my-button');
 const animista = document.querySelector('.puff');
+const filterBox = document.querySelectorAll('.card'),
+      courses = document.querySelector('.check-boxes'),
+      courseOne = document.querySelectorAll('.check-box'),
+      idSet = [],
+      dataAtribute =[];
 
 setInterval(function start() {
     btnRubberBand.classList.toggle('animate__rubberBand');
@@ -13,11 +18,7 @@ setInterval(function puffOut() {
 },5000);
 
 window.onload = function () {
-          ///////////////////////////////////////////////////////////////////////////////////
-          
-          
-         
-          ///////////////////////////////////////////////////////////////////////////////////////
+
     let outPopUp = document.querySelector('.my-popup-style'),
         slise = document.querySelector('.my-popup'),
         closest = document.querySelectorAll(".closed"),
@@ -72,24 +73,63 @@ window.onload = function () {
                 `;
               }, timeout);
       }
-////////////////////////////////////////////////////////////
 
-
-
-//////////////////////////////////////////////////////////////////////
       closest.forEach(function(elem) { 
         elem.addEventListener("click", function(e){ 
           remove();
           e.preventDefault();
         });
       });
+/////////////////////////////////////////////////////////
 
 
+addData();
 };
 
 
 
 
+function addData() {
+  courseOne.forEach(function (elem) {
+    let checkElem = elem.parentNode.dataset.course;
+     if(elem.checked){
+      idSet.push(checkElem);
+    } 
+  });
+
+  filterBox.forEach(function (elem) {
+    let cardElem = elem.dataset.course;
+    if(idSet.indexOf(cardElem) == -1 && idSet.length != 0){
+      elem.classList.add('close');
+    }
+  });
+}
+////////////////////////////////////////////////////////////////
+courseOne.forEach(function (elem) {
+  elem.addEventListener('click', function (event) {
+    let ch = event.target;
+    let checkElem = ch.parentNode.dataset.course;
+    if (ch.checked && idSet.indexOf(checkElem) == -1){
+      idSet.push(checkElem);
+    }else if (!ch.cheked && idSet.indexOf(checkElem) != -1){
+      let index = idSet.indexOf(checkElem);
+      idSet.splice(index, 1);
+    }
+    filterBox.forEach(function (elem) {
+      let cardElem = elem.dataset.course;
+      if( idSet.indexOf(cardElem) == -1){
+        elem.classList.add('close');
+      } else {
+        elem.classList.remove('close');
+      }
+    });
+    filterBox.forEach(function (elem) {
+      if (idSet.length == 0){
+        elem.classList.remove('close');
+      }
+    });
+  });
+});
 
 
 
