@@ -1,6 +1,6 @@
-const btnRubberBand = document.querySelector('.my-button');
-const animista = document.querySelector('.puff');
-const filterBox = document.querySelectorAll('.card'),
+const btnRubberBand = document.querySelector('.my-button'),
+      animista = document.querySelector('.puff'),
+      filterBox = document.querySelectorAll('.card'),
       courses = document.querySelector('.check-boxes'),
       courseOne = document.querySelectorAll('.check-box'),
       idSet = [],
@@ -84,27 +84,7 @@ window.onload = function () {
 
 
 addData();
-};
-
-
-
-
-function addData() {
-  courseOne.forEach(function (elem) {
-    let checkElem = elem.parentNode.dataset.course;
-     if(elem.checked){
-      idSet.push(checkElem);
-    } 
-  });
-
-  filterBox.forEach(function (elem) {
-    let cardElem = elem.dataset.course;
-    if(idSet.indexOf(cardElem) == -1 && idSet.length != 0){
-      elem.classList.add('close');
-    }
-  });
-}
-////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////
 courseOne.forEach(function (elem) {
   elem.addEventListener('click', function (event) {
     let ch = event.target;
@@ -130,6 +110,30 @@ courseOne.forEach(function (elem) {
     });
   });
 });
+
+
+};
+
+
+
+
+function addData() {
+  courseOne.forEach(function (elem) {
+    let checkElem = elem.parentNode.dataset.course;
+     if(elem.checked){
+      idSet.push(checkElem);
+    } 
+  });
+
+  filterBox.forEach(function (elem) {
+    let cardElem = elem.dataset.course;
+    if(idSet.indexOf(cardElem) == -1 && idSet.length != 0){
+      elem.classList.add('close');
+    }
+  });
+}
+////////////////////////////////////////////////////////////////
+
 
 
 
